@@ -26,7 +26,7 @@
            <div class="input-group-text ">
              <i class="fa fa-plus"></i>
            </div></div>
-            <input  type="text" id="firstName" name="name" placeholder="Enter Name here" class="form-control"/>
+            <input required type="text" id="firstName" name="name" placeholder="Enter Name here" class="form-control"/>
            </div>
            
        <!-- Second Name -->    
@@ -36,7 +36,7 @@
            <div class="input-group-text ">
              <i class="fas fa-user-alt"></i>
            </div></div>
-            <input  type="text" id="SecondName" name="secondName" placeholder="Enter Nick Name here" class="form-control"/>
+            <input required type="text" id="SecondName" name="secondName" placeholder="Enter Nick Name here" class="form-control"/>
          </div>
          
          <!-- Phone field -->
@@ -46,7 +46,7 @@
            <div class="input-group-text ">
              <i class="fa fa-phone"></i>
            </div></div>
-            <input  type="number" id="Number" name="phone" placeholder="Enter Phone Number here" class="form-control"/>
+            <input required type="number" id="Number" name="phone" placeholder="Enter Phone Number here" class="form-control"/>
           </div>
           
           <!-- Email -->
@@ -56,7 +56,7 @@
            <div class="input-group-text ">
               @
            </div></div>
-            <input  type="email" id="email" name="email" placeholder="Enter email here" class="form-control"/>
+            <input required type="email" id="email" name="email" placeholder="Enter email here" class="form-control"/>
           </div>
           
           <!-- Work field -->
@@ -66,13 +66,13 @@
            <div class="input-group-text ">
              <i class="fa fa-briefcase"></i>
            </div></div>
-            <input  type="text" id="work" name="work" placeholder="Enter work here" class="form-control"/>
+            <input required type="text" id="work" name="work" placeholder="Enter work here" class="form-control"/>
           </div>
           
          <!-- Contact Description -->
          <div class="form-grup mt-3">
          
-         <textarea  placeholder="Enter contact description" name="description" id="description" class="form-control"  rows="10" cols=""></textarea>
+         <textarea  placeholder="Enter contact description" name="description" id="mytextarea" class="form-control"  rows="10" cols=""></textarea>
          
          </div> 
          
@@ -96,8 +96,12 @@
 </div>
 </div>
 </div>
-
-
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+ <script>
+      tinymce.init({
+        selector: '#mytextarea'
+      });
+    </script>
 </section>
 
 
