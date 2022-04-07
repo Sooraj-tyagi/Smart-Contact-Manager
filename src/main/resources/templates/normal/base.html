@@ -48,7 +48,7 @@
     <a href="#"  th:href="@{/user/index}" class="item"><i class="fas fa-house"></i>  Home</a>
     <a href="#" th:href="@{/user/show-contacts/0}" class="item"><i class="fas fa-id-card-alt"></i> View Contacts</a>
     <a href="#"  th:href="@{/user/add-contact}" class="item"><i class="fas fa-pencil-alt"></i> Add Contacts</a>
-    <a href="" class="item"><i class="fas fa-user-circle"></i> Your Profile</a>
+    <a href="#" th:href="@{/user/profile}" class="item"><i class="fas fa-user-circle"></i> Your Profile</a>
     <a href="" class="item"><i class="fas fa-cogs"></i> Settings</a>
     <a href="" th:href="@{/logout}" class="item"><i class="fas fa-sign-out-alt"></i> Logout</a>
     <div class="divider"></div>
@@ -86,6 +86,30 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script >
+    function deleteContact(cId)   {
+    	swal({
+    		  title: "Are you sure?",
+    		  text: "you want to delete this contact..",
+    		  icon: "warning",
+    		  buttons: true,
+    		  dangerMode: true,
+    		})
+    		.then((willDelete) => {
+    		  if (willDelete) {
+    		   
+    			  window.location="/user/delete/"+cId; 
+    			  
+    		  } else {
+    		    swal("Your contact is safe!");
+    		  }
+    		});
+    }
+    
+    </script>
+    
+    
     <script th:src="@{/JS/script.js}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </body>

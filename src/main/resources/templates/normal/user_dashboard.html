@@ -6,9 +6,18 @@
 </head>
 <body>
 <section>
-
-<h1>User Name</h1>
-
+<div class="container">
+<div class="card">
+<div class="card-body my-5">
+<div class="container text-center">
+ <img src="" style="height:200px; width:200px" class="my_profile_picture" th:src="@{'/img/contact_logo.png'}" alt="profile photo">
+</div>  
+<h1 class="text-center mt-3 text-secondary font-italic">Start Adding Contact on cloud...</h1>
+<div class="text-center">
+<a th:href="@{/user/add-contact}" class="btn btn-primary btn-block-l  text-uppercase mt-5 ">Add New Contact</a>
+</div>
+</div>
+</div></div>
 
 </section>
 
