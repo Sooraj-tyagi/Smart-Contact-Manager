@@ -88,3 +88,23 @@ body{
 	border-radius:50%;
 	
 }
+
+/* search css*/
+.search-container{
+	position:relative;
+	
+}
+
+.search-result{
+	position:absolute;
+	background:white;
+	width:100%;
+	padding:10px;
+	border:1px solid gray;
+	display:none;
+}
+
+.active{
+	background:#009688 !important;
+	color:white !important;
+}

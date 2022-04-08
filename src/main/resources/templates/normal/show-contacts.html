@@ -11,7 +11,16 @@
 <div class="card-body">
 <h1 class="text-center">Your Contacts</h1>
 
-<table class="table">
+<!-- Search -->
+<div class="search-container my-3">
+<input onkeyup="search()" id="search-input" type="text" class="form-control" placeholder="Search your Contacts" />
+<div class="search-result">
+
+</div>
+
+</div>
+<div class="table-responsive">
+<table class="table table-hover">
   <thead>
     <tr>
       <th scope="col">#ID</th>
@@ -47,7 +56,7 @@
    
   </tbody>
 </table>
-
+</div>
 <!-- Pagination part -->
 
 
@@ -63,6 +72,14 @@
 </div>
 
 </div>
+   <script >
+ $(document).ready(() => {
+	$(".item").removeClass("active");
+	$("#contacts-link").addClass("active");
+ });
+
+
+</script> 
 
 </section>
 
