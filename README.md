@@ -1,5 +1,5 @@
 # Smart-Contact-Manager
-Smart Contact Manager
+
 Creating smart contact manager application using springboot, spring MVC, JPA-Hibernate,Thymeleaf, MySQL, Spring Security, validation ,Devtools.
 # Dependencies Required
 1.Starter-web<br>
