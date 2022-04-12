@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org" th:replace="base::layout(~{::section})">
+<head>
+ <meta charset="UTF-8"/>
+ <title>Home-page</title>
+</head>
+<body>
+<section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex align-items-center justify-content-center h-100">
+      <div class="col-md-8 col-lg-7 col-xl-6">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" class="img-fluid" alt="Phone image">
+      </div>
+      <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+        <!-- email form -->
+        
+        <div class="alert alert-success" role="alert">
+        We have sent OTP to your email..
+        </div>
+        
+      <!-- message box -->
+      <div th:if="${session.message}" class="container">
+      <div  class="alert alert-danger my-2 text-center" role="alert">
+      
+      <span th:text="${session.message}"></span> 
+      
+      </div>
+      <th:block th:text="${#session.removeAttribute('message')}"></th:block>
+      </div>
+        
+        
+        
+        
+        
+        <form method="post" action="" th:action="@{/verify-otp}">
+        <div class="form-group">
+        <input name="otp" required="required" type="text" placeholder="Enter OTP here" class="form-control" />
+        </div>
+        <div class="container text-center">
+        <button class="btn btn-success mt-3">Verify</button>
+        
+        </div>
+        
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</body>
+</html>

@@ -108,3 +108,7 @@ body{
 	background:#009688 !important;
 	color:white !important;
 }
+.align-right {
+        text-align: right;
+       
+      }

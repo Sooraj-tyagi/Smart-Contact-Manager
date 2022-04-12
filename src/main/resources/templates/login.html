@@ -25,6 +25,10 @@
           You have been logged out
         </div>
         
+         <div th:if="${param.change}" class="alert alert-success">
+         <p th:text="${param.change}"></p>
+        </div>
+        
           <!-- Email input -->
           <div class="form-outline mb-4">
              <label for="username" class="sr-only">Username</label>
@@ -42,7 +46,12 @@
             <a href="/signUp/" class="text-info text-primary">Register Here</a>
           
             </div>
-          
+            
+            <div class="align-right">
+             
+             <a th:href="@{/forgot}" class="text-info text-primary">Forgot Password</a>
+             </div>
+                       
           </div>
 
           <!-- Submit button -->
